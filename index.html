@@ -182,11 +182,19 @@
       }
     }
 
+    .header-links {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 24px;
+    }
+
     .vmk-link {
       display: inline-flex;
       align-items: center;
       gap: 8px;
-      margin-top: 24px;
       padding: 12px 24px;
       background: var(--accent-soft);
       border: 1px solid var(--accent);
@@ -274,6 +282,7 @@
     .tool-card:nth-child(4) { animation-delay: 0.4s; }
     .tool-card:nth-child(5) { animation-delay: 0.5s; }
     .tool-card:nth-child(6) { animation-delay: 0.6s; }
+    .tool-card:nth-child(7) { animation-delay: 0.7s; }
 
     @keyframes fadeInUp {
       from {
@@ -502,13 +511,25 @@
       </div>
       <!-- <h1>MyVMK Tools</h1> -->
       <p class="tagline">A collection of dashboards and tools made by bsims to enhance your MyVMK experience</p>
-      <a href="https://www.myvmk.com/home#" class="vmk-link" target="_blank" rel="noopener noreferrer">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
-          <polyline points="9 22 9 12 15 12 15 22"/>
-        </svg>
-        Visit MyVMK
-      </a>
+      <div class="header-links">
+        <a href="https://www.myvmk.com/home#" class="vmk-link" target="_blank" rel="noopener noreferrer">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+            <polyline points="9 22 9 12 15 12 15 22"/>
+          </svg>
+          Visit MyVMK
+        </a>
+        <a href="https://buymeacoffee.com/bsims" class="vmk-link" target="_blank" rel="noopener noreferrer">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M18 8h1a4 4 0 0 1 0 8h-1"/>
+            <path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/>
+            <line x1="6" y1="1" x2="6" y2="4"/>
+            <line x1="10" y1="1" x2="10" y2="4"/>
+            <line x1="14" y1="1" x2="14" y2="4"/>
+          </svg>
+          Buy me a coffee
+        </a>
+      </div>
     </header>
 
     <main>
@@ -603,6 +624,21 @@
           </span>
         </a>
 
+        <!-- VMK Collector Discord Bot -->
+        <a href="https://bsims-codes.github.io/clubvmk-portal/" class="tool-card">
+          <div class="tool-icon">🤖</div>
+          <div class="tool-content">
+            <h2 class="tool-title">VMK Collector Discord Bot</h2>
+            <p class="tool-description">Learn more by joining the ClubVMK Discord channel, and edit your VMK Collector Profile here.</p>
+          </div>
+          <span class="tool-arrow">
+            Edit your profile
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M5 12h14M12 5l7 7-7 7"/>
+            </svg>
+          </span>
+        </a>
+
         <!--
         =============================================
         ADD MORE TOOLS HERE
@@ -634,6 +670,9 @@
         <img src="bsims.png" alt="bsims avatar">
         <span>Created by bsims</span>
       </div>
+      <p class="footer-text" style="margin-bottom: 8px;">
+        Enjoying the tools? <a href="https://buymeacoffee.com/bsims" target="_blank" rel="noopener noreferrer">Buy me a coffee ☕</a>
+      </p>
       <p class="footer-text">
         Fan-made tools. Not affiliated with MyVMK or Disney.
       </p>
@@ -707,5 +746,8 @@
       }, 250);
     });
   </script>
+
+  <!-- Buy Me a Coffee widget -->
+  <script data-name="BMC-Widget" data-cfasync="false" src="https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js" data-id="bsims" data-description="Support me on Buy me a coffee!" data-message="" data-color="#BD5FFF" data-position="Right" data-x_margin="18" data-y_margin="18"></script>
 </body>
 </html>
